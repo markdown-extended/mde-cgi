@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# mde-handler-cgi.sh
+# mde-cgi-handler.sh
 # CGI-script to parse Markdown files with the PHP-MarkdownExtended package
 # <http://github.com/piwi/mde-cgi>
 # by @pierowbmstr (me at e-piwi dot fr)
@@ -8,8 +8,8 @@
 #
 # Please see the README.md file of the package as a documentation.
 #
-# You can define custom values for the variables below by setting them in the environment
-# of your virtual host configuration:
+# You can define custom values for the variables used in the "Config values" section
+# of this script by setting them in the environment of your virtual host configuration:
 #
 #       SetEnv MYVAR my-value   # with Apache
 #       env MYVAR=my-value;     # with Nginx
