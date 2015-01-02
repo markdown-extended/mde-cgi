@@ -39,7 +39,8 @@ done
 
 # MDE_BIN: path to the markdown parser binary script
 [ -z "$MDE_BIN" ] && MDE_BIN="$(command -v markdown-extended)";
-( [ -z "$MDE_BIN" ]||[ ! -f "$MDE_BIN" ] ) && ERRORS+=("MDE binary '${MDE_BIN}' not found!");
+( [ -z "$MDE_BIN" ]||[ ! -f "$MDE_BIN" ] ) && MDE_BIN="$(readlink -f "${MDE_BASEPATH}/markdown-extended")";
+[ ! -f "$MDE_BIN" ] && ERRORS+=("MDE binary '${MDE_BIN}' not found!");
 
 # MDE_TEMPLATE: path to a template file to include parsed content in
 [ -z "$MDE_TEMPLATE" ] && MDE_TEMPLATE="$(readlink -f "${MDE_BASEPATH}/mde-template.html")";

@@ -22,12 +22,6 @@ behavior of a web-server for static files), you will have a complex HTML reach c
 This works by asking the server to treat concerned files, filtered by their extensions,
 with a special script that makes the transformation and returns the result.
 
-To use the CGI script of this directory, you can make a symbolic link to your server's
-`cgi-bin` directory:
-
-    $ cd docs/Server-Handler/
-    $ ln -s "$(pwd)/mde-handler-cgi.sh" path/to/server/cgi-bin/
-
 
 Installation
 ------------
@@ -70,10 +64,8 @@ version of the script.
 Basically, you need two files paths for the default handler to work:
 
 -   the path to a working `markdown-extended` command (this can be the default `bin/markdown-extended`
-    script of an installed package or a `markdown-extended.phar` archive), which defaults
-    to the `markdown-extended` symbolic link of this directory
--   the path to a template file to use, which defaults to the `mde-template.html`
-    file of this directory
+    script of an installed package or a `markdown-extended.phar` archive)
+-   the path to a template file to use.
 
 The following variables are available:
 
@@ -84,7 +76,8 @@ The following variables are available:
     optional if you define the `MDE_BIN` and `MDE_TEMPLATE` as absolute paths)
 
 -   `MDE_BIN` : the path to the `markdown-extended` parser binary script to use ; this
-    defaults to a global or "per-user" installed version of the `markdown-extended`
+    defaults to a global or "per-user" installed version of the `markdown-extended` OR
+    a `${MDE_BASEPATH}/markdown-extended` script
 
 -   `MDE_TEMPLATE` : the path to a template file to include parsed content in ; this defaults
     to `${MDE_BASEPATH}/mde-template.html`
@@ -137,3 +130,15 @@ To define a configuration variable, write:
 ### Server running [Nginx](http://nginx.org/)
 
 *this documentation part has to be done, sorry :(*
+
+
+About the template
+------------------
+
+The HTML template proposed in this package is VERY simple. It is just the basic structure
+of an HTML content with the basic elements of a MarkdownExtended content. You can (of course)
+build you own template following the notation described in 
+[the original package](http://github.com/piwi/markdown-extended/tree/master/docs/).
+
+A reach version using [Bootstrap](http://getbootstrap.com/) is available in the `mde-master` 
+branch of my other package [HTML5 quick template](http://github.com/piwi/html5-quick-template/tree/mde-master).
