@@ -2,7 +2,7 @@
 #
 # mde-cgi-handler.sh
 # CGI-script to parse Markdown files with the PHP-MarkdownExtended package
-# <http://github.com/piwi/mde-cgi>
+# <http://github.com/markdown-extended/mde-cgi>
 # by @pierowbmstr (me at e-piwi dot fr)
 # licensed under <http://unlicense.org>
 #

@@ -36,7 +36,7 @@ To make the CGI script work, you will need three things:
 
 For a complete fresh installation (NOT including the markdown-extended package), you can use:
 
-    $ wget --no-check-certificate https://github.com/piwi/mde-cgi/archive/master.tar.gz
+    $ wget --no-check-certificate https://github.com/markdown-extended/mde-cgi/archive/master.tar.gz
     $ tar -xvf master.tar.gz
     $ cd mde-cgi-master
     $ ln -s "$(pwd)/mde-cgi-handler.sh" {path to your server CGI binaries}/
